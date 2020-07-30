@@ -2,12 +2,12 @@
 (require test-engine/racket-tests)
 
 (define atom?
-  (lambda (x)
+  (λ (x)
     (and (not (pair? x)) (not (null? x)))))
 
 
 (define lat?
-  (lambda (x)
+  (λ (x)
     (cond
     [(null? x) #t]
     [(atom? (car x)) (lat? (cdr x)) #t]
